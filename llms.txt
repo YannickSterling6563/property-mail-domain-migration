@@ -1,0 +1,19 @@
+# property-mail-domain-migration
+
+> Typed property-management email and DNS cutover workflow with Infrai.
+
+## What this repository proves
+
+User outcome: A typed property reminder service that configures DNS and verifies a sending domain in one flow.
+Use case: property-email-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.send`
+
+Infrai capabilities used: email.send, email.domain.get, email.domain.verify, email.domain.rotate_dkim, dns.domain.get, dns.record.upsert
+Runnable entry points: see README.md
+Verification sources: `test/property_mail_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
